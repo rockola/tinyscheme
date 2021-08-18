@@ -1,5 +1,5 @@
-        Building TinyScheme
-        -------------------
+Building TinyScheme
+===================
 
 The included makefile includes logic for Linux, Solaris and Win32, and can
 readily serve as an example for other OSes, especially Unixes. There are
@@ -11,11 +11,10 @@ Autoconfing TinyScheme was once proposed, but the distribution would not be
 so small anymore. There are few platform dependencies in TinyScheme, and in
 general compiles out of the box.
 
-     Customizing
-     -----------
+## Customizing
 
-     The following symbols are defined to default values in scheme.h.
-     Use the -D flag of cc to set to either 1 or 0.
+The following symbols are defined to default values in scheme.h.
+Use the -D flag of cc to set to either 1 or 0.
 
      STANDALONE
      Define this to produce a standalone interpreter.
@@ -69,17 +68,18 @@ general compiles out of the box.
      but you do care about faster execution.
 
 
-     OS-X tip
-     --------
-     I don't have access to OS-X, but Brian Maher submitted the following tip:
+### OS-X tip
 
-[1] Download and install fink (I installed fink in
-/usr/local/fink)
-[2] Install the 'dlcompat' package using fink as such:
-> fink install dlcompat
-[3] Make the following changes to the
-tinyscheme-1.32.tar.gz
+I don't have access to OS-X, but Brian Maher submitted the following tip:
 
+1. Download and install fink (I installed fink in /usr/local/fink)
+2. Install the 'dlcompat' package using fink as such:
+
+		> fink install dlcompat
+
+3. Make the following changes to the tinyscheme-1.32.tar.gz
+
+```
 diff -r tinyscheme-1.32/dynload.c
 tinyscheme-1.32-new/dynload.c
 24c24
@@ -137,3 +137,4 @@ tinyscheme-1.32-new/scheme.c
 > # endif /* macintosh */
 > #endif /* !OSX */
 Only in tinyscheme-1.32-new/: scheme.o
+```
