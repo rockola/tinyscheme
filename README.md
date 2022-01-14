@@ -18,6 +18,9 @@ with (so far) some additional documentation cleanup.
 
 See [doc/Manual.md](doc/Manual.md).
 
+To build TinyScheme: see
+[doc/Building_TinyScheme.md](doc/Building_TinyScheme.md).
+
 ## Licensing
 
 This software is open source, covered by a [BSD-style license](LICENSE).
